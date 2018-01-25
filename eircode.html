@@ -4,16 +4,36 @@
 <title>String Functions</title>
 <script>
 var EirCode
+function EnterEirCode()
+{	
+	EirCode = prompt("Please Enter Your Eir Code", "H87 F3DG");
+}
+
+function CheckEirCode(EirCode)
+{
+	if(EirCode.length >=8)
+			return true
+		else
+			return false
+}
+
+</script>
+</head>
+
 <body>
-
-<h1>Eircode input</h1>
-
 <script>
+EnterEirCode()
 
-EirCode = prompt("Please Enter Your Eir Code", "H87 F3DG");
+while (!CheckEirCode(EirCode))
+{
+	alert("Eir Code Has Too Few Characters.");
+	EnterEirCode();
+}
 
-document.write("<p>Your Eircode is " + EirCode + "</p>");
-document .write("<p>Your EirCode is " + EirCode.length + " characters in length</p>");
+alert("Thanks For Entering Your Eir Code.")
+document.write("Goodbye");
+
+
 </script>
 
 </body>
