@@ -3,22 +3,28 @@ var hourNow = today.getHours();
 var greeting;
 
 var day = today.getDay();
+
+console.log("day index is " + day);
+
 var weekDay;
 
-if(day == 3){
-		weekDay = "Wednesday";
-} else if (day ==4){
-		weekDay = "Thursday";
-} else if (day ==5){
-		weekDay = "Friday";
-}
+var weekDay = new Array('Sunday',
+					'Monday',
+					'Tuesday',
+					'Wednesday',
+					'Thursday',
+					'Friday',
+					'Saturday');
+					
+
+
 
 if (hourNow > 18) {
-	greeting = 'Good evening, its ' + weekDay;
+	greeting = 'Good evening, its ' + weekDay[day];
 } else if (hourNow > 12) {
-	greeting = 'Good afternoon Stephen! Happy ' + weekDay;
+	greeting = 'Good afternoon Stephen! Happy ' + weekDay[day];
 } else if (hourNow > 0) {
-	greeting = 'Good morning Stephen! Happy ' + weekDay;
+	greeting = 'Good morning Stephen! Happy ' + weekDay[day];
 }else {
 	greeting = 'Welcome! ';
 }
